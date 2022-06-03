@@ -2,28 +2,28 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: linear-gradient(0deg, #4e182d 0%, #ffa781 100%);
 }
-.content {
-    padding-bottom: 90px;
+#content {
+    padding-bottom: 40px;
 }
-.banner {
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center center;
+#banner {
     height: 100vh;
     display: grid;
     place-items: center;
     color: #ffefe0;
 }
-.banner h2 {
+#banner h2 {
     font-size: 60px;
     text-transform: uppercase;
     font-weight: 900;
     color: rgba(0, 0, 0, 0.783);
 }
-.banner p {
+#banner p {
     font-weight: 600;
     font-size: 30px;
     color: rgba(0, 0, 0, 0.783);
@@ -32,13 +32,14 @@ body {
     font-weight: 700;
     color: #ffefe0;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.531);
+    -webkit-transition: all .6s ease;
     transition: all .6s ease;
 }
 .spotify:hover {
     color:#fecab3;
     text-decoration: none;
 }
-.banner img {
+.perfil_photo {
     height: 250px;
     width: 250px;
     object-fit: cover;
@@ -49,8 +50,10 @@ body {
 }
 img:hover {
     transform: scale(1.04);
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.389));
 }
+.perfil_photo:hover {
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.389));
+} 
 .box {
     margin-top: 25px;
     cursor: pointer;
@@ -65,4 +68,46 @@ img:hover {
 .box:hover img {
     transform: scale(1.04);
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.389));
+}
+.arrow {
+    height: 20px;
+    width: 20px;
+    opacity: 0.8;
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+    cursor: pointer;
+    animation: vertical-shaking 1s infinite;
+    opacity: 0.6;
+}
+.arrow:hover {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.468));
+}
+@keyframes vertical-shaking {
+    0% { transform: translateY(0) }
+    25% { transform: translateY(5px) }
+    50% { transform: translateY(-5px) }
+    75% { transform: translateY(5px) }
+    100% { transform: translateY(0) }
+}
+footer {
+    display: grid;
+    place-items: center;
+    margin-top: -8px;
+    margin-bottom: 50px;
+}
+.arrow-container {
+    position: absolute;
+    top: 94vh;
+}
+.icons8 {
+    text-decoration: none;
+    color: #ffefe0;
+    padding-left: 8px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.531);
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+}
+.icons8:hover {
+    color:#fecab3;
+    text-decoration: none;
 }
