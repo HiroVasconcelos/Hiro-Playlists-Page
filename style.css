@@ -28,17 +28,22 @@ body {
     font-size: 30px;
     color: rgba(0, 0, 0, 0.783);
 }
-.banner span {
+.spotify {
     font-weight: 700;
-    color: #ffffffcf;
+    color: #ffefe0;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.531);
+    transition: all .6s ease;
+}
+.spotify:hover {
+    color:#fecab3;
+    text-decoration: none;
 }
 .banner img {
     height: 250px;
     width: 250px;
     object-fit: cover;
     border-radius: 1000px;
-    -webkit-transition: all .3s ease;
+    -webkit-transition: all .6s ease;
     transition: all .6s ease;
     cursor: pointer;
 }
@@ -52,7 +57,7 @@ img:hover {
 }
 .box img {
     border-radius: 10px;
-    -webkit-transition: all .3s ease;
+    -webkit-transition: all .6s ease;
     transition: all .6s ease;
     height: 100%;
     width: 100%;
@@ -61,12 +66,3 @@ img:hover {
     transform: scale(1.04);
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.389));
 }
-/* footer {
-    color: #ffffffcf;
-    font-weight: 700;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.531);
-    text-align: center;
-    width: 100%;
-    margin-top: auto;
-    padding: 1rem;
-} */
